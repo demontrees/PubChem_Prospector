@@ -1,8 +1,8 @@
 import urllib3
 import json
-import time
 from concurrent.futures import ThreadPoolExecutor
 from itertools import repeat
+
 #                                                                                                   
 #           PubChem Prospector:                                                                     _
 #    This pakcage is designed to pull annotations from PubChem via their PUGView API         __  __|_|__ 
@@ -16,7 +16,8 @@ from itertools import repeat
 # it is structured {entry_type:[annotations]}
 
 def build_annotation_dict(): 
-    http = urllib3.PoolManager()
+    retries = urllib3.Retry(total=5, backoff_factor=0.2, status_forcelist=[500, 502, 503, 504])
+    http = urllib3.PoolManager(retries=retries)
     p = http.request("GET",'https://pubchem.ncbi.nlm.nih.gov/rest/pug/annotations/headings/JSON',timeout=10.0)
     p= json.loads(p.data.decode('utf-8'))
     global pc_annotations
@@ -40,6 +41,7 @@ def annotation_search(entry_type, string):
 # nice clean package, accesible by the numeric ids for that entry type in PubChem
 
 def get_anns_wname(ann,name):
+    global anns
     try:
         x,y,z = [ann['LinkedRecords'][list(ann['LinkedRecords'].keys())[0]][0],ann['Name'],[s['String'] for d in ann['Data'] for s in d['Value']['StringWithMarkup']]]
         anns[x]={'Name':y,name:z}
@@ -51,6 +53,7 @@ def get_anns_wname(ann,name):
                 pass
 
 def get_ann_wname(ann,name):
+    global anns
     try:
         x,y,z = [ann['LinkedRecords'][list(ann['LinkedRecords'].keys())[0]][0],ann['Name'],ann['Data'][0]['Value']['StringWithMarkup'][0]['String']]
         anns[x]={'Name':y,name:z}
@@ -62,6 +65,7 @@ def get_ann_wname(ann,name):
                 pass
             
 def get_anns(ann,name):
+    global anns
     try:
         x,y = [ann['LinkedRecords'][list(ann['LinkedRecords'].keys())[0]][0],[s['String'] for d in ann['Data'] for s in d['Value']['StringWithMarkup']]]
         anns[x]={name:y}
@@ -73,6 +77,7 @@ def get_anns(ann,name):
                 pass
 
 def get_ann(ann,name):
+    global anns
     try:
         x,y = [ann['LinkedRecords'][list(ann['LinkedRecords'].keys())[0]][0],ann['Data'][0]['Value']['StringWithMarkup'][0]['String']]
         anns[x]={name:y}
@@ -84,13 +89,14 @@ def get_ann(ann,name):
                 pass
 
 def get_json_anns(pg, args):
+    global anns
     entry_type, annotation_type, has_name, multi, numpgs = args
     print("\033[F\033[K", end='')
     print(f'page {pg}/{numpgs-1}')
     p = http.request("GET",f'https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/annotations/heading/{annotation_type}/JSON?heading_type={entry_type}&page={pg}',timeout=10.0)
     p= json.loads(p.data.decode('utf-8'))
     tries = 0
-    while tries < 60:
+    while tries < 10:
         if has_name:
             if multi:
                 try:
@@ -117,14 +123,15 @@ def get_json_anns(pg, args):
                     break
                 except: 
                     tries+=1
-        time.sleep(1)
-        if tries==60:
+        if tries==10:
             print('Error page ',pg)
     
 def get_all_anns(entry_type, annotation_type, threads = 32):
+    global anns
     has_name = entry_type in ['Cell','Compound','Substance','Element']
     global http
-    http = urllib3.PoolManager()
+    retries = urllib3.Retry(total=5, backoff_factor=0.2, status_forcelist=[500, 502, 503, 504])
+    http = urllib3.PoolManager(retries=retries)
     annotation_type
     anns = {}
     p=http.request("GET",f'https://pubchem.ncbi.nlm.nih.gov/rest/pug_view/annotations/heading/{annotation_type}/JSON?heading_type={entry_type}&page=0',timeout=10.0)
@@ -141,6 +148,8 @@ def get_all_anns(entry_type, annotation_type, threads = 32):
         executor.map(get_json_anns, range(1, numpgs), repeat([entry_type, annotation_type, has_name, multi, numpgs]))
 
 def add_anns(k,a):
+    global pc_p
+    global anns
     try:
         pc_p[k][a]=anns[k]
     except:
@@ -150,6 +159,7 @@ def get_dict(entry_type, annotation_types, threads = 32):
     global pc_p
     global anns
     pc_p = {}
+    anns = {}
     if isinstance(annotation_types,list):
         for a in annotation_types:
             print('Getting ',a,' annotations')
@@ -158,5 +168,5 @@ def get_dict(entry_type, annotation_types, threads = 32):
     else:
         get_all_anns(entry_type,annotation_types,threads = threads)
         pc_p = anns
+    del anns
     return pc_p
-    del pc_p, anns
