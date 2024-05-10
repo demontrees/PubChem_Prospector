@@ -1,52 +1,88 @@
+     _ __                              _,.----.  ,--.-,,-,--,    ,----.         ___                 
+  .-`.' ,`.  .--.-. .-.-.   _..---.  .' .' -   \/==/  /|=|  | ,-.--` , \ .-._ .'=.'\                
+ /==/, -   \/==/ -|/=/  | .' .'.-. \/==/  ,  ,-'|==|_ ||=|, ||==|-  _.-`/==/ \|==|  |,--.--------.  
+|==| _ .=. ||==| ,||=| -|/==/- '=' /|==|-   |  .|==| ,|/=| _||==|   `.-.|==|, |  / -/==/,  -   , -\ 
+|==| , '=',||==|- | =/  ||==|-,   ' |==|_   `-' \==|- `-' _ /==/_ ,    /|==|   \/  ,\==\.-.  - ,-./ 
+|==|-  '..' |==|,  \/ - ||==|  .=. \|==|   _  , |==|  _     |==|    .-' |==|- ,   _ |`--`--------`  
+|==|,  |    |==|-   ,   //==/- '=' ,\==\.       /==|   .-. ,\==|_  ,`-._|==| _|  |  |               
+/==/ - |    /==/ , _  .'|==|   -   / `-.`.___.-'/==/, //=/  /==/ ,     //==/  /V/ , /               
+`--`---'    `--`..---'  `-._`.___,'             `--`-' `-`--`--`-----`` `--`./  `--`                
+                  _ __                  _,.---._      ,-,--.     _ __                               
+               .-`.' ,`.  .-.,.---.   ,-.' , -  `.  ,-.'-  _\ .-`.' ,`.                             
+              /==/, -   \/==/  `   \ /==/_,  ,  - \/==/_ ,_.'/==/, -   \,--.--------.               
+             |==| _ .=. |==|-, .=., |==|   .=.     \==\  \  |==| _ .=. /==/,  -   , -\              
+             |==| , '=',|==|   '='  /==|_ : ;=:  - |\==\ -\ |==| , '=',\==\.-.  - ,-./              
+             |==|-  '..'|==|- ,   .'|==| , '='     |_\==\ ,\|==|-  '..' `--`--------`               
+             |==|,  |   |==|_  . ,'. \==\ -    ,_ //==/\/ _ |==|,  |                                
+             /==/ - |   /==/  /\ ,  ) '.='. -   .' \==\ - , /==/ - |                                
+             `--`---'   `--`-`--`--'    `--`--''    `--`---'`--`---'                                
+                  ,----.    _,.----.  ,--.--------.   _,.---._                                      
+               ,-.--` , \ .' .' -   \/==/,  -   , -\,-.' , -  `.   .-.,.---.                        
+              |==|-  _.-`/==/  ,  ,-'\==\.-.  - ,-./==/_,  ,  - \ /==/  `   \                       
+              |==|   `.-.|==|-   |  . `--`\==\- \ |==|   .=.     |==|-, .=., |                      
+             /==/_ ,    /|==|_   `-' \     \==\_ \|==|_ : ;=:  - |==|   '='  /                      
+             |==|    .-' |==|   _  , |     |==|- ||==| , '='     |==|- ,   .'                       
+             |==|_  ,`-._\==\.       /     |==|, | \==\ -    ,_ /|==|_  . ,'.                       
+             /==/ ,     / `-.`.___.-'      /==/ -/  '.='. -   .' /==/  /\ ,  )                      
+             `--`-----``                   `--`--`    `--`--''   `--`-`--`--'                       
 
-     _ __                                   _,.----.    ,--.-,,-,--,       ,----.           ___                                                
-  .-`.' ,`.   .--.-. .-.-.     _..---.    .' .' -   \  /==/  /|=|  |    ,-.--` , \   .-._ .'=.'\                                               
- /==/, -   \ /==/ -|/=/  |   .' .'.-. \  /==/  ,  ,-'  |==|_ ||=|, |   |==|-  _.-`  /==/ \|==|  |                                              
-|==| _ .=. | |==| ,||=| -|  /==/- '=' /  |==|-   |  .  |==| ,|/=| _|   |==|   `.-.  |==|,|  / - |                                              
-|==| , '=',| |==|- | =/  |  |==|-,   '   |==|_   `-' \ |==|- `-' _ |  /==/_ ,    /  |==|  \/  , |                                              
-|==|-  '..'  |==|,  \/ - |  |==|  .=. \  |==|   _  , | |==|  _     |  |==|    .-'   |==|- ,   _ |  ,--.--------.                               
-|==|,  |     |==|-   ,   /  /==/- '=' ,| \==\.       / |==|   .-. ,\  |==|_  ,`-._  |==| _ /\   | /==/,  -   , -\                              
-/==/ - |     /==/ , _  .'  |==|   -   /   `-.`.___.-'  /==/, //=/  |  /==/ ,     /  /==/  / / , / \==\.-.  - ,-./                              
-`--`---'     `--`..---'    `-._`.___,'                 `--`-' `-`--`  `--`-----``   `--`./  `--`   `--`--------`                               
-     _ __                      _,.---._        ,-,--.       _ __          ,----.     _,.----.    ,--.--------.      _,.---._                   
-  .-`.' ,`.    .-.,.---.     ,-.' , -  `.    ,-.'-  _\   .-`.' ,`.     ,-.--` , \  .' .' -   \  /==/,  -   , -\   ,-.' , -  `.     .-.,.---.   
- /==/, -   \  /==/  `   \   /==/_,  ,  - \  /==/_ ,_.'  /==/, -   \   |==|-  _.-` /==/  ,  ,-'  \==\.-.  - ,-./  /==/_,  ,  - \   /==/  `   \  
-|==| _ .=. | |==|-, .=., | |==|   .=.     | \==\  \    |==| _ .=. |   |==|   `.-. |==|-   |  .   `--`\==\- \    |==|   .=.     | |==|-, .=., | 
-|==| , '=',| |==|   '='  / |==|_ : ;=:  - |  \==\ -\   |==| , '=',|  /==/_ ,    / |==|_   `-' \       \==\_ \   |==|_ : ;=:  - | |==|   '='  / 
-|==|-  '..'  |==|- ,   .'  |==| , '='     |  _\==\ ,\  |==|-  '..'   |==|    .-'  |==|   _  , |       |==|- |   |==| , '='     | |==|- ,   .'  
-|==|,  |     |==|_  . ,'.   \==\ -    ,_ /  /==/\/ _ | |==|,  |      |==|_  ,`-._ \==\.       /       |==|, |    \==\ -    ,_ /  |==|_  . ,'.  
-/==/ - |     /==/  /\ ,  )   '.='. -   .'   \==\ - , / /==/ - |      /==/ ,     /  `-.`.___.-'        /==/ -/     '.='. -   .'   /==/  /\ ,  ) 
-`--`---'     `--`-`--`--'      `--`--''      `--`---'  `--`---'      `--`-----``                      `--`--`       `--`--''     `--`-`--`--'  
+                              
+                                           ::::::::::                                          
+                                        :::::::  ::::::!!!!!!!!!!!/!                           
+                                     ::::         !!!!!!!!!!!!!!!!!!!!                         
+                                   ::::        !!!!!!!!!!!!!!!!!!!!!!!!!!!                     
+                                  ::::       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                    
+                                 :::       !!!!!!!!!!!!!!+!! !!!!!!!!!!!!!!                    
+                                 :::    !!!!!!!!!!!!!!    +! !!!!!!!!!!!!!!                    
+                               ::::    !!!!!!!!!!!!      ;   !  !!!!!!!!!!!                    
+                               ::::  !!!!!!!!!!!     ;;;;;  ;;  ;;!!!!!!!!                     
+                              :::: !!!!!!!!!!!    ;;;;;;;; ;;;;;;;!!!!!!!!                     
+                              ::::!!!!!!!!!!    ;;;   +      ;;;;!!!!!!!!                      
+                             :::!!!!!!!!!!     ;;   ++++      ++ !!!!!!!                       
+                            :::!!!!!!!!!!W     ;    ++@0   \ +0@ !!!!!!\\\\\\\\                
+                            :!!!!!!!!!!WWW          +++@    \ @++!!!!!\\\\\\\\\\\\\\\\         
+                            :!!!!!!!!!WWWW               |  │   !!!!\\\\\\\\\\\\\\\\\\\\\      
+                            !!!!!!!!! WWWW W           | |   \  !  W\\\\\\\\\\\\     \\\\\\    
+                           !!!!!!!!!!WWWWWWWW      WWWWW──|──|  WWW\\\  \\\\\\\\        \\\\\  
+                          !!!!!!!!!!WWWWWWWWWWW WWWWWWWWWWWWWWWWWWW\     \\\\\\\          \\\\ 
+                          !!!!!!!!!!WWWWWWWWW WWWW┌ W WWWWWWWWWWWWW       \\   \            \\ 
+                          !!!!!!!!!!WWWWWWWWWWWWWW \U\ ____/  WWWWWW  W    \   \\              
+                          !!!!!!!!!!WWWWWWW WWWWWW │  U UU  │  WWWWWW      \\   \              
+                          !!!!!!!!!!WWWWWWWWWWWWWW  \ \  \ \│ WWWWW         \\  \\             
+                          !!!!!!!!!WWWWWWWWWWWWWWWWW \nn_n__/WWWWW           \   \/            
+                            !!!!!WWWWWWWWWWWWWWWWWWWWWWW W WWWWWWWW          \\  /  /          
+                             !!!!!WW!WWWWWWWWWWWWWWWWWWWWWWWWWWW            / ─  -   /         
+                              !!!!!!!!!!!WWWWWWWWWWWWWWWWWWWWWWWWW             /    /          
+                                !!!!!!!WWWW!WWWWWWWWWWWW WWWWWW               ─   -   /        
+                                     !!!!!!!W!!WWW WWWWWWW  WWWW                  - /          
+                                                 WWWW W         WWW            ── ─            
+                                                                                                                                                               
+                                                                                                                                                
+                                                                                                                                   
+          PubChem Prospector:                                                                     _                                
+   This pakcage is designed to pull annotations from PubChem via their PUGView API         __  __|_|__                        
+   It iterates through JSON pages and retrieves the annotations. It is designed for      / \   _|+.+|_                     
+   Multi-threading and will work best with HPC systems with fast internet connections       \// |WWW|\\                          
+   Be aware the time required will vary wildly with each annotation type                        // \\       
 
-                                                                                                                         ::::::::::                                         
-                                                                                                                      :::::::  ::::::!!!!!!!!!!!/!                          
-                                                                                                                   ::::         !!!!!!!!!!!!!!!!!!!!                        
-          PubChem Prospector:                                                                     _              ::::        !!!!!!!!!!!!!!!!!!!!!!!!!!!                    
-   This pakcage is designed to pull annotations from PubChem via their PUGView API         __  __|_|__          ::::       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!                   
-   It iterates through JSON pages and retrieves the annotations. It is designed for      / \   _|+.+|_         :::       !!!!!!!!!!!!!!+!! !!!!!!!!!!!!!!                   
-   Multi-threading and will work best with HPC systems with fast internet connections       \// |WWW|\\        :::    !!!!!!!!!!!!!!    +! !!!!!!!!!!!!!!                   
-   Be aware the time required will vary wildly with each annotation type                        // \\        ::::    !!!!!!!!!!!!      ;   !  !!!!!!!!!!!                   
-                                                                                                             ::::  !!!!!!!!!!!     ;;;;;  ;;  ;;!!!!!!!!                    
-                                                                                                            :::: !!!!!!!!!!!    ;;;;;;;; ;;;;;;;!!!!!!!!                    
-                                                                                                            ::::!!!!!!!!!!    ;;;   +      ;;;;!!!!!!!!                     
-   build_annotation_dict:									            :::!!!!!!!!!!     ;;   ++++      ++ !!!!!!!                      
-this function creates a dictionary of all possible annotations PubChem Prospector can access	            :::!!!!!!!!!!W     ;    ++@0   \ +0@ !!!!!!\\\\\\\\               
-just run "build_annotation_dict()" and access the dictionary by calling pc_annotations		            :!!!!!!!!!!WWW          +++@    \ @++!!!!!\\\\\\\\\\\\\\\\        
-it is structured {entry_type:[annotations]}							           :!!!!!!!!!WWWW               |  │   !!!!\\\\\\\\\\\\\\\\\\\\\     
-                                                                                                           !!!!!!!!! WWWW W           | |   \  !  W\\\\\\\\\\\\     \\\\\\   
-                                                                                                          !!!!!!!!!!WWWWWWWW      WWWWW──|──|  WWW\\\  \\\\\\\\        \\\\\ 
-the available entry types are:                                                                            !!!!!!!!!!WWWWWWWWWWW WWWWWWWWWWWWWWWWWWW\     \\\\\\\          \\\\
-                                                                                                          !!!!!!!!!!WWWWWWWWW WWWW┌ W WWWWWWWWWWWWW        \   \            \\
-Taxonomy, Element, Cell, Protein, Assay, Gene, Compound, and Pathway				          !!!!!!!!!!WWWWWWWWWWWWWW \U\ ____/  WWWWWW W     \   \\             
-                                                                                                          !!!!!!!!!!WWWWWWW WWWWWW │  U UU  │  WWWWWW      \\   \             
-Usage:                                                                                                    !!!!!!!!!!WWWWWWWWWWWWWW  \ \  \ \│ WWWWW         \\  \\            
-                                                                                                          !!!!!!!!!WWWWWWWWWWWWWWWWW \nn_n__/WWWWW           \   \/           
-build_annotation_dict()                                                                                     !!!!!WWWWWWWWWWWWWWWWWWWWWWW W WWWWWWWW          \\  /  /         
-                                                                                                             !!!!!WW!WWWWWWWWWWWWWWWWWWWWWWWWWWW            / ─  -   /        
-                                                                                                              !!!!!!!!!!!WWWWWWWWWWWWWWWWWWWWWWWWW             /    /         
-                                                                                                                !!!!!!!WWWW!WWWWWWWWWWWW WWWWWW               ─   -   /       
-annotation_search:                                                                                                   !!!!!!!W!!WWW WWWWWWW  WWWW                  - /         
-this function is just a quick shortcut for searching annotations in the pc_annotations dictionary                                WWWW W         WWW            ── ─           
+                   
+   build_annotation_dict:									                                
+this function creates a dictionary of all possible annotations PubChem Prospector can access	                       
+just run "build_annotation_dict()" and access the dictionary by calling pc_annotations		                 
+it is structured {entry_type:[annotations]}							          
+
+
+the available entry types are:                                                                        
+
+Taxonomy, Element, Cell, Protein, Assay, Gene, Compound, and Pathway				          
+          
+Usage:                                                                                                    
+          
+build_annotation_dict()                                                                                  
+
+       
+annotation_search:                                                                                                  
+this function is just a quick shortcut for searching annotations in the pc_annotations dictionary                
 just give it the entry_type and the string to search by and you can save the result(s) as a variable     
 
 Usage:
