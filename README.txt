@@ -78,8 +78,8 @@ Taxonomy, Element, Cell, Protein, Assay, Gene, Compound, and Pathway
           
 Usage:                                                                                                    
           
-build_annotation_dict()                                                                                  
-
+prospector.build_annotation_dict()                                                                                  
+prospector.pc_annotations
        
 annotation_search:                                                                                                  
 this function is just a quick shortcut for searching annotations in the pc_annotations dictionary                
@@ -87,7 +87,7 @@ just give it the entry_type and the string to search by and you can save the res
 
 Usage:
 
-z = annotation_search({ENTRY_TYPE},{SEARCH_STRING})
+z = prospector.annotation_search({ENTRY_TYPE},{SEARCH_STRING})
 
 get_dict
 this is the main function of PubChem_Prospector. It calls a series of smaller functions to build a 
@@ -100,5 +100,5 @@ You can specify the number of threads as well. Default is 32
 
 Usage:
 
-pc_dict = get_dict({ENTRY_TYPE}, {ANNOTATION_TYPE}, threads = 32)                                        
+prospector.pc_dict = get_dict({ENTRY_TYPE}, {ANNOTATION_TYPE}, threads = 32)                                        
 													 
