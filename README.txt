@@ -100,5 +100,5 @@ You can specify the number of threads as well. Default is 32
 
 Usage:
 
-prospector.pc_dict = get_dict({ENTRY_TYPE}, {ANNOTATION_TYPE}, threads = 32)                                        
+pc_dict = prospector.get_dict({ENTRY_TYPE}, {ANNOTATION_TYPE}, threads = 32)                                        
 													 
